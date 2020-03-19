@@ -15,12 +15,11 @@ public class metodos {
     
     public void escribeFichero(String ficheiro) 
     {
-      //  MeuObjectOutputStream esc = null;
+     
         ObjectOutputStream fich = null;
         try
         {
-           //  esc = new MeuObjectOutputStream(          
-           //         new FileOutputStream(ficheiro));
+           
             
             fich = new ObjectOutputStream(new FileOutputStream(ficheiro));
             for (int i = 0; i <3; i++) // como exemplo gardamos 3 obxectos
@@ -28,7 +27,7 @@ public class metodos {
                 // ollo ! instanciamos os obxectos tipo persoa dentro do bucle
                 
                 Persoa p = new Persoa(cadea("nome :"),cadea("apelido :"),enteiro("edade :"),cadea("nome mascota :"),enteiro(" numero patas :"));
-               // esc.writeObject(p);
+              
                 fich.writeObject(p);
             }
            
